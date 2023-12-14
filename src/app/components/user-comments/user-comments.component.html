@@ -1,0 +1,21 @@
+<div class="comments-container">
+  <h2>Commentaires des utilisateurs</h2>
+
+  <!-- Affichage des commentaires existants -->
+  <div *ngIf="comments.length > 0">
+    <ul>
+      <li *ngFor="let comment of comments">
+        {{ comment.user }} : {{ comment.text }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="comments.length === 0">
+    Aucun commentaire pour le moment.
+  </div>
+
+  <!-- Formulaire pour ajouter un nouveau commentaire -->
+  <form (submit)="addComment()">
+    <textarea placeholder="Ajouter un commentaire" [(ngModel)]="newComment"></textarea>
+    <button type="submit">Ajouter un commentaire</button>
+  </form>
+</div>

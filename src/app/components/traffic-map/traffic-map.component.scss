@@ -1,0 +1,28 @@
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar {
+  margin-bottom: 20px; /* Espace entre la barre de recherche et la carte */
+}
+
+.map-frame {
+  width: 100%;
+  margin: 0 auto; /* Déplace la carte vers la droite */
+  max-width: 600px; /* Limite la largeur maximale de la carte */
+}
+
+.etat-normal {
+  color: green; /* Texte en vert pour l'état 'normal' */
+}
+
+.etat-embouteillage {
+  color: yellow; /* Texte en jaune pour l'état 'embouteillage' */
+}
+
+.etat-accident {
+  color: red; /* Texte en rouge pour l'état 'accident' */
+}

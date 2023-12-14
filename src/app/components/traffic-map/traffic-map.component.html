@@ -1,0 +1,14 @@
+<div class="map-container">
+  <div class="search-bar">
+    <input type="text" placeholder="Localisation" [(ngModel)]="origin">
+    <input type="text" placeholder="Destination" [(ngModel)]="destination">
+    <button (click)="searchTrafficDetails()">Rechercher</button>
+  </div>
+
+  <div class="map-frame">
+    <!-- Carte Google Maps -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25540.093391124967!2d10.2793216!3d36.85416959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2stn!4v1702512935515!5m2!1sfr!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <app-user-comments></app-user-comments>
+  
+</div>

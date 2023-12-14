@@ -1,0 +1,53 @@
+
+
+ <!-- <div class="details-header">
+    <h2>Détails du trafic</h2>
+    <button (click)="goToTrafficMap()">Retour à la recherche</button>
+  </div> -->
+<div class="details-container">
+  <div class="map-container">
+    <!-- Carte Google Maps -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25540.093391124967!2d10.2793216!3d36.85416959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2stn!4v1702512935515!5m2!1sfr!2stn"  width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+  <div class="button-below-map">
+    <button (click)="goToTrafficMap()">Retour à la recherche</button>
+  </div>
+
+
+
+ <div class="details-lists">
+  <div class="traffic-details-list">
+    <h3>Détails du trafic</h3>
+    <ul>
+      <li *ngFor="let detail of trafficDetails" [ngClass]="{
+        'normal': detail.etat === 'normal',
+        'embouteillage': detail.etat === 'embouteillage',
+        'accident': detail.etat === 'accident'
+      }">
+        
+        <p>Localisation : {{ detail.localisation }}</p>
+        <p>Destination : {{ detail.destination }}</p>
+        <p>Route : {{ detail.route }}</p>
+        <p [ngClass]="{ 'etat-normal': detail.etat === 'normal', 'etat-embouteillage': detail.etat === 'embouteillage', 'etat-accident': detail.etat === 'accident' }">État : {{ detail.etat }}</p>
+
+      </li>
+    </ul>
+  </div>
+
+  <div class="accident-details-list">
+    <h3>Détails des accidents :</h3>
+    <ul>
+      <li *ngFor="let accident of accidentDetails">
+      <p>Title : {{ accident.title }}</p>
+        <p>Description : {{ accident.description }}</p>
+        <p>Location : {{ accident.location }}</p>
+        <p>Link : <a href="{{ accident.link }}" target="_blank">{{ accident.link }}</a></p>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
